@@ -13,12 +13,16 @@ This repository contains my dot files. Configuration files for bash, vim, and an
 
 Setup
 -----
-Running this script will perform the following actions:
+First you need to clone the repo correctly.  Because I use submodules for several of the vim plugins in the vim/bundle folder, you'll need to run the following command to pull down the repository correctly:
+
+     git clone git@github.com:mkoby/dotmatrix.git --recursive
+
+After you've cloned the repository you'll need to run the setup script.  Running this script will perform the following actions:
 
 1. Remove existing .vimrc, .bashrc, and .vim folder. If they're symbolic links, it will UNLINK and if they're files, it will REMOVE them.
 2. Link the folders in your $HOME folder to the files/folders in your local clone of this repo
 
-I want to note that I've tested this script locally and it seems to work as expected. If you find errors or know how to make it better, let me know.
+This script will delete files/folders or unlink symbolic links.  I want to note that I've tested this script locally and it seems to work as expected. If you find errors or know how to make it better, let me know.
 
      bash setup.sh
 
