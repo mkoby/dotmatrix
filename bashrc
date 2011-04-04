@@ -101,6 +101,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# GVim Alias 160x48 geometry
+alias gvim='gvim -geometry 160x48'
+
 #Programming Aliases
 alias rspec='rspec --color -f d'
 

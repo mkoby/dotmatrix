@@ -4,6 +4,7 @@
 VIMRC=${HOME}/.vimrc
 VIMFOLDER=${HOME}/.vim
 BASHRC=${HOME}/.bashrc
+GEMRC=${HOME}/.gemrc
 
 # First remove existing files if they exist
 if [ -h ${VIMRC} ]; then
@@ -27,13 +28,23 @@ else
 fi
 
 if [ -h ${BASHRC} ]; then
-	echo ".basrc is a LINK, unlinking"
+	echo ".bashrc is a LINK, unlinking"
 	unlink ${BASHRC}
 elif [ -f ${BASHRC} ]; then
 	echo ".bashrc is a FILE, deleting"
 	rm -f ${BASHRC}
 else
 	echo "${BASHRC} was not found"
+fi
+
+if [ -h ${GEMRC} ]; then
+	echo ".gemrc is a LINK, unlinking"
+	unlink ${GEMRC}
+elif [ -f ${GEMRC} ]; then
+	echo ".gemrc is a FILE, deleting"
+	rm -f ${GEMRC}
+else
+	echo "${GEMRC} was not found"
 fi
 
 
@@ -47,4 +58,7 @@ ln -s `pwd`/vim $VIMFOLDER
 
 echo "Linking .bashrc file"
 ln -s `pwd`/bashrc $BASHRC
+
+echo "Linking .gemrc file"
+ln -s `pwd`/gemrc $GEMRC
 
