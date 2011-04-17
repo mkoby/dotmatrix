@@ -11,6 +11,8 @@ set mouse=a
 set number
 set nowrap
 set t_Co=256
+set shiftwidth=2
+set expandtab
 colorscheme pablo
 
 let mapleader = "\\"
