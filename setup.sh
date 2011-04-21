@@ -4,6 +4,7 @@
 VIMRC=${HOME}/.vimrc
 VIMFOLDER=${HOME}/.vim
 BASHRC=${HOME}/.bashrc
+BASHPROFILE=${HOME}/.bash_profile
 GEMRC=${HOME}/.gemrc
 
 # First remove existing files if they exist
@@ -37,6 +38,16 @@ else
 	echo "${BASHRC} was not found"
 fi
 
+if [ -h ${BASHPROFILE} ]; then
+	echo ".bash_profile is a LINK, unlinking"
+	unlink ${BASHPROFILE}
+elif [ -f ${BASHPROFILE} ]; then
+	echo ".bash_profile is a FILE, deleting"
+	rm -f ${BASHPROFILE}
+else
+	echo "${BASHPROFILE} was not found"
+fi
+
 if [ -h ${GEMRC} ]; then
 	echo ".gemrc is a LINK, unlinking"
 	unlink ${GEMRC}
@@ -58,6 +69,9 @@ ln -s `pwd`/vim $VIMFOLDER
 
 echo "Linking .bashrc file"
 ln -s `pwd`/bashrc $BASHRC
+
+echo "Linking .bash_profile file"
+ln -s `pwd`/bash_profile $BASHPROFILE
 
 echo "Linking .gemrc file"
 ln -s `pwd`/gemrc $GEMRC
