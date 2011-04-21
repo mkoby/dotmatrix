@@ -4,7 +4,9 @@ set directory=/tmp/
 
 call pathogen#runtime_append_all_bundles()
 
-syntax on
+syntax enable
+set background=dark
+colorscheme solarized
 filetype plugin indent on
 
 set mouse=a
@@ -13,7 +15,6 @@ set nowrap
 set t_Co=256
 set shiftwidth=2
 set expandtab
-colorscheme pablo
 
 let mapleader = "\\"
 map <Leader>n :NERDTreeToggle<CR>
