@@ -6,7 +6,7 @@ call pathogen#runtime_append_all_bundles()
 
 syntax enable
 set background=dark
-colorscheme vividchalk
+colorscheme pablo
 filetype plugin indent on
 
 set mouse=a

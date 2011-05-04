@@ -2,6 +2,7 @@
 
 # Initialize files/folders we want to work with
 VIMRC=${HOME}/.vimrc
+GVIMRC=${HOME}/.gvimrc
 VIMFOLDER=${HOME}/.vim
 BASHRC=${HOME}/.bashrc
 BASHPROFILE=${HOME}/.bash_profile
@@ -16,6 +17,16 @@ elif [ -f ${VIMRC} ]; then
 	rm -f ${VIMRC}
 else
 	echo "${VIMRC} was not found"
+fi
+
+if [ -h ${GVIMRC} ]; then
+	echo ".gvimrc is a LINK, unlinking"
+	unlink ${GVIMRC}
+elif [ -f ${GVIMRC} ]; then
+	echo ".gvimrc is a FILE, deleting"
+	rm -f ${GVIMRC}
+else
+	echo "${GVIMRC} was not found"
 fi
 
 if [ -h ${VIMFOLDER} ]; then
@@ -63,6 +74,9 @@ fi
 
 echo "Linking .vimrc file"
 ln -s `pwd`/vimrc $VIMRC
+
+echo "Linking .gvimrc file"
+ln -s `pwd`/gvimrc $GVIMRC
 
 echo "Linking .vim folder"
 ln -s `pwd`/vim $VIMFOLDER
