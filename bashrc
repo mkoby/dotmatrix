@@ -128,9 +128,15 @@ if [ -x /usr/local/bin/brew ]; then
     . `brew --prefix`/etc/bash_completion
   fi
 fi
-#if [ -f `brew --prefix`/etc/bash_completion ]; then
-#  . `brew --prefix`/etc/bash_completion
-#fi
+
+#Teabrick Specific Stuff
+export MAGICK_HOME="/opt/ImageMagick-6.6.7"
+
+if [ -d $MAGICK_HOME ]; then
+        export PATH="$MAGICK_HOME/bin:$PATH"
+        export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
+fi
+
  
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; export rvm_pretty_print_flag=1 ; fi
 
