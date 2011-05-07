@@ -26,6 +26,12 @@ This script will delete files/folders or unlink symbolic links.  I want to note 
 
      bash setup.sh
 
+Setup Ruby Version Manager (RVM)
+--------------------------------
+Note: If you're going to run this on OSX, you'll need to install XCode first to get some of the compiler stuff needed to install RVM.
+
+If you want to setup RVM and you have a Linux or OSX machine, you can run the setup_rvm.sh (Linux) or setup_rvm_osx.sh (OSX) scripts.  These scripts will install the pre-requisites (Linux will use apt-get, OSX will use Homebrew), and then install RVM and rubies for 1.8.7 and 1.9.2.
+
 Warranty
 --------
 
