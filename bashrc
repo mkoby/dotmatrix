@@ -87,13 +87,6 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    if ls --color &>/dev/null; then
-      ls_opt="--color" #Linux ls colors
-    else
-      ls_opt="-G" #Mac OSX ls colors
-    fi
-    alias ls='ls $ls_opt'
-    #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
@@ -102,6 +95,13 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
+if ls --color &>/dev/null; then
+        ls_opt="--color" #Linux ls colors
+else
+        ls_opt="-G" #Mac OSX ls colors
+fi
+alias ls='ls $ls_opt'
+ 
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
