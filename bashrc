@@ -72,7 +72,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-PS1="\[${WHITE}\][\[${LIGHTBLUE}\]\w\[${WHITE}${GREEN}\]${GITPROMPT}\[${WHITE}\]]\[${NC}\]\$ "
+PS1="\[${WHITE}\][\[${LIGHTCYAN}\]\w\[${WHITE}${GREEN}\]${GITPROMPT}\[${WHITE}\]]\[${NC}\]\$ "
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -96,8 +96,10 @@ fi
 
 # some more ls aliases
 if ls --color &>/dev/null; then
+        export LS_COLORS="di=01;33"
         ls_opt="--color" #Linux ls colors
 else
+        export LSCOLORS=dxfxcxdxbxegedabagacad
         ls_opt="-G" #Mac OSX ls colors
 fi
 alias ls='ls $ls_opt'
