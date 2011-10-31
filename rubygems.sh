@@ -7,4 +7,4 @@ fi
 cd ~/Downloads
 wget http://production.cf.rubygems.org/rubygems/rubygems-1.8.10.tgz 
 tar xzvf rubygems-1.8.10.tgz 
-rvm ruby rubygems-1.8.10/setup.rb
+rvmsudo ruby ~/Downloads/rubygems-1.8.10/setup.rb
