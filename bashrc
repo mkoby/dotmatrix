@@ -139,3 +139,4 @@ fi
  
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; export rvm_pretty_print_flag=1 ; fi
 
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/android_sdk/tools:/opt/idea/bin
