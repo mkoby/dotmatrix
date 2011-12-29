@@ -30,7 +30,7 @@ Setup Ruby Version Manager (RVM)
 --------------------------------
 Note: If you're going to run this on OSX, you'll need to install XCode first to get some of the compiler stuff needed to install RVM.
 
-If you want to setup RVM and you have a Linux or OSX machine, you can run the setup_rvm.sh (Linux) or setup_rvm_osx.sh (OSX) scripts.  These scripts will install the pre-requisites (Linux will use apt-get, OSX will use Homebrew), and then install RVM and rubies for 1.8.7 and 1.9.2.
+If you want to setup RVM and you have a Linux or OSX machine, you can run the setup_rvm.sh. This currently only supports the Ubuntu variety of Linux (uses apt-get to install pre-reqs). This new version of the script should work for both Ubuntu or OSX, but it hasn't been throughly tested yet. So use at your own risk.
 
 Warranty
 --------
