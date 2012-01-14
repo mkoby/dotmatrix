@@ -8,7 +8,7 @@ function check_platform {
 
         if [[ "$OS" == "linux-gnu" ]]; then
           PLATFORM='LINUX'
-        elif [[ "$OS" == "darwin11" ]]; then
+        elif [[ "$OS" == "darwin" ]]; then
           PLATFORM='OSX'
         fi
 }
@@ -18,7 +18,7 @@ function install_or_update_brew {
           #brew is install so update it and the programs we need
           brew update
           brew upgrade wget git bash-completion
-        elif
+        else
           ruby -e "$(curl -fsSL https://gist.github.com/raw/323731/install_homebrew.rb)" #install homebrew
           brew install wget git bash-completion
         fi
@@ -39,7 +39,8 @@ function install_prerequisites {
 }
 
 function install_rvm {
-        bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
+        bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer )
+        #bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
 }
 
 function source_rvm {
@@ -70,10 +71,12 @@ function remove_rvmrc_file {
 }
 
 remove_rvmrc_file
+check_platform
 install_prerequisites
 
 #Run the RVM set up command
 install_rvm
+source_rvm
 
 #Install various rubies, I use 1.8.7 & 1.9.2 at the moment
 install_default_rubies
