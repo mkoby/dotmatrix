@@ -54,7 +54,7 @@ function install_default_rubies {
 
 function set_default_ruby {
         echo "Set default ruby version to 1.9.2"
-        rvm --default use 1.9.2
+        rvm alias create default 1.9.2
 }
 
 #remove $HOME/.rvmrc if exists
@@ -88,3 +88,4 @@ set_default_ruby
 remove_rvmrc_file
 echo "linking .rvmrc file"
 ln -s `pwd`/rvmrc $RVMRC
+
