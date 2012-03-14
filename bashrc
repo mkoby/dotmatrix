@@ -2,6 +2,15 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+function __my_rvm_ruby_version {
+  local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
+  [ "$gemset" != "" ] && gemset="@$gemset"
+  local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
+  [ "$version" == "1.8.7" ] && version=""
+  local full="$version$gemset"
+  [ "$full" != "" ] && echo "$full "
+}
+
 export GIT_PS1_SHOWDIRTYSTATE=1
 GITPROMPT='$(__git_ps1)'
 
@@ -72,7 +81,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-PS1="\[${WHITE}\][\[${LIGHTCYAN}\]\w\[${WHITE}${GREEN}\]${GITPROMPT}\[${WHITE}\]]\[${NC}\]\$ "
+PS1="\[${WHITE}\][${LIGHTPURPLE}\$(__my_rvm_ruby_version)${WHITE}\[${LIGHTCYAN}\]\w\[${WHITE}${GREEN}\]${GITPROMPT}\[${WHITE}\]]\[${NC}\]\$ "
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
