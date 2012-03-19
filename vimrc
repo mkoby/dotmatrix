@@ -5,8 +5,14 @@ set directory=/tmp/
 call pathogen#runtime_append_all_bundles()
 
 syntax enable
-set background=dark
-colorscheme pablo
+
+if has('gui_running')
+  set background=dark
+  colorscheme solarized
+else
+  colorscheme pablo
+endif
+
 filetype plugin indent on
 
 set mouse=a
