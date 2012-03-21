@@ -4,6 +4,10 @@ set directory=/tmp/
 
 call pathogen#runtime_append_all_bundles()
 
+if has("gui_running")
+    set guifont=Courier\ New\ 14
+endif
+
 syntax enable
 
 if has('gui_running')
