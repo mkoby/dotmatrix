@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/mkoby/git/LiveShow/app/controllers'
 let g:netrw_dirhist_2='/home/mkoby/git/algorithms/ruby/sorting/insertion_sort.rb'
 let g:netrw_dirhist_3='/media/Stuffage/git/grep/src'
+let g:netrw_dirhist_4='/Users/mkoby/git/tropo-test/app/controllers'
