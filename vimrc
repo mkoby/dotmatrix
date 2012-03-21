@@ -5,7 +5,11 @@ set directory=/tmp/
 call pathogen#runtime_append_all_bundles()
 
 if has("gui_running")
+  if has("gui_gtk2")
     set guifont=Courier\ New\ 14
+  else
+    set guifont=Courier\ New:h14
+  endif
 endif
 
 syntax enable
