@@ -8,7 +8,7 @@ if has("gui_running")
   if has("gui_gtk2")
     set guifont=Courier\ New\ 14
   else
-    set guifont=Courier\ New:h14
+    set guifont=Courier\ New:h18
   endif
 endif
 
