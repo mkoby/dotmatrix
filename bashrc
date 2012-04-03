@@ -81,7 +81,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-PS1="\[${WHITE}\][${LIGHTPURPLE}\$(__my_rvm_ruby_version)${WHITE}\[${LIGHTCYAN}\]\w\[${WHITE}${GREEN}\]${GITPROMPT}\[${WHITE}\]]\[${NC}\]\$ "
+PS1="\[${WHITE}\][\[${LIGHTPURPLE}\]\$(__my_rvm_ruby_version)\[${LIGHTCYAN}\]\w\[${WHITE}${GREEN}\]${GITPROMPT}\[${WHITE}\]]\[${NC}\]\$ "
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
