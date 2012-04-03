@@ -43,3 +43,6 @@
 [submodule "vim/bundle/vim-conque"]
 	path = vim/bundle/vim-conque
 	url = https://github.com/rson/vim-conque.git
+[submodule "vim/bundle/vim-golang"]
+	path = vim/bundle/vim-golang
+	url = https://github.com/jnwhiteh/vim-golang.git
