@@ -120,9 +120,6 @@ alias l='ls -CF'
 # GVim Alias 160x48 geometry
 alias gvim='gvim -geometry 160x48'
 
-#Programming Aliases
-alias rspec='rspec --color -f d'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
