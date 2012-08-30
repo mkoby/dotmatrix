@@ -145,3 +145,5 @@ fi
  
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; export rvm_pretty_print_flag=1 ; fi
 
+[[ -f ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
