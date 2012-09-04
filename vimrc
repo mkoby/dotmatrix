@@ -3,6 +3,7 @@ set nocompatible
 set directory=/tmp/
 
 call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 if has("gui_running")
   if has("gui_gtk2")
