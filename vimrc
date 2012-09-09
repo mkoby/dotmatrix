@@ -52,9 +52,11 @@ map <leader>s :FufTag<CR>
 
 runtime! macros/matchit.vim
 
-
 augroup myfiletypes
   autocmd!
   autocmd FileType ruby,eruby,yaml,cucumber set ai sw=2 sts=2 et
 augroup END
+
+let g:rubytest_cmd_spec = "rspec -f p --no-color %p"
+let g:rubytest_cmd_example = "rspec -f p %p --no-color -e '%c'"
 
