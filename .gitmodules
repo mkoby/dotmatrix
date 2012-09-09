@@ -52,3 +52,9 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/vim-fuzzyfinder"]
+	path = vim/bundle/vim-fuzzyfinder
+	url = https://github.com/toupeira/vim-fuzzyfinder.git
+[submodule "vim/bundle/L9"]
+	path = vim/bundle/L9
+	url = https://github.com/vim-scripts/L9.git
