@@ -32,6 +32,20 @@ Note: If you're going to run this on OSX, you'll need to install XCode first to 
 
 If you want to setup RVM and you have a Linux or OSX machine, you can run the setup_rvm.sh. This currently only supports the Ubuntu variety of Linux (uses apt-get to install pre-reqs). This new version of the script should work for both Ubuntu or OSX, but it hasn't been throughly tested yet. So use at your own risk.
 
+VIM Plugins
+-----------
+In order to use the included VIM plugins (as submodules) you'll need to first ensure the plugins have been downloaded. If you didn't clone with ```--recursive``` you'll need to do a ```git submodule update``` to pull down the plugin files.
+
+To get the most out of the vim-fuzzyfinder plugin, you'll need to:
+
+1. Have ctags installed (```sudo apt-get install ctags``` on Ubuntu)
+2. Your project will have needed have been ctagged. If you doing a rails project something like ```ctag app/**/*.rb``` should get you get you up and running nicely.
+
+For using vim-rubytest I have it set to defaults, which are:
+
+```<Leader>t```: run test case under cursor  
+```<Leader>T```: run all tests in a file
+
 Warranty
 --------
 
