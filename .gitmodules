@@ -58,3 +58,6 @@
 [submodule "vim/bundle/L9"]
 	path = vim/bundle/L9
 	url = https://github.com/vim-scripts/L9.git
+[submodule "vim/bunde/tabular"]
+	path = vim/bunde/tabular
+	url = https://github.com/godlygeek/tabular.git
