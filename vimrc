@@ -58,5 +58,5 @@ augroup myfiletypes
 augroup END
 
 let g:rubytest_cmd_spec = "rspec -f p --no-color %p"
-let g:rubytest_cmd_example = "rspec -f p %p --no-color -e '%c'"
+let g:rubytest_cmd_example = "rspec %p --no-color -l '%c'"
 
