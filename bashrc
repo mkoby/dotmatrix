@@ -152,4 +152,6 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; e
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Add path for Android SDK
-export PATH="/opt/android_sdk/tools:/opt/android_sdk/platform-tools:$PATH"
+if [ -d /opt/android_sdk ]; then
+  export PATH="/opt/android_sdk/tools:/opt/android_sdk/platform-tools:$PATH"
+fi
