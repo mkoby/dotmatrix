@@ -153,3 +153,11 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; e
 
 [[ -f ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+### Add path for Android SDK
+if [ -d /opt/android_sdk ]; then
+  export PATH="/opt/android_sdk/tools:/opt/android_sdk/platform-tools:$PATH"
+fi
