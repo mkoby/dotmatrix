@@ -120,6 +120,12 @@ alias l='ls -CF'
 # GVim Alias 160x48 geometry
 alias gvim='gvim -geometry 160x48'
 
+# Alias HUB as git if hub is installed
+# Find HUB at http://defunkt.io/hub/
+if which hub >/dev/null; then
+  alias git='hub'
+fi
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
