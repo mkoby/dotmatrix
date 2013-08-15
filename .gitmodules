@@ -42,7 +42,7 @@
 	url = https://github.com/vim-scripts/VimClojure.git
 [submodule "vim/bundle/vim-conque"]
 	path = vim/bundle/vim-conque
-	url = ://github.com/basepi/vim-conque.gitt
+	url = https://github.com/basepi/vim-conque.gitt
 [submodule "vim/bundle/vim-golang"]
 	path = vim/bundle/vim-golang
 	url = https://github.com/jnwhiteh/vim-golang.git
@@ -54,7 +54,7 @@
 	url = https://github.com/scrooloose/syntastic.git
 [submodule "vim/bundle/vim-fuzzyfinder"]
 	path = vim/bundle/vim-fuzzyfinder
-	url = https://github.com/toupeira/vim-fuzzyfinder.git
+	url = https://github.com/vim-scripts/FuzzyFinder.git
 [submodule "vim/bundle/L9"]
 	path = vim/bundle/L9
 	url = https://github.com/vim-scripts/L9.git
