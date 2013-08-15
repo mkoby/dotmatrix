@@ -7,6 +7,7 @@ VIMFOLDER=${HOME}/.vim
 BASHRC=${HOME}/.bashrc
 BASHPROFILE=${HOME}/.bash_profile
 GEMRC=${HOME}/.gemrc
+ALIASES=${HOME}/.bash_aliases
 
 # First remove existing files if they exist
 if [ -h ${VIMRC} ]; then
@@ -59,6 +60,16 @@ else
 	echo "${GEMRC} was not found"
 fi
 
+if [ -h ${ALIASES} ]; then
+	echo ".bash_aliases is a LINK, unlinking"
+	unlink ${ALIASES}
+elif [ -f ${ALIASES} ]; then
+	echo ".bash_aliases is a FILE, deleting"
+	rm -f ${ALIASES}
+else
+	echo "${ALIASES} was not found"
+fi
+
 
 #Create symbolic links to these files
 
@@ -77,3 +88,5 @@ ln -s `pwd`/bash_profile $BASHPROFILE
 echo "Linking .gemrc file"
 ln -s `pwd`/gemrc $GEMRC
 
+echo "Linking .bash_aliases file"
+ln -s `pwd`/bash_aliases $ALIASES
