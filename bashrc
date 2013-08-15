@@ -115,7 +115,6 @@ if [ -x /usr/local/bin/brew ]; then
     . `brew --prefix`/etc/bash_completion
   fi
 fi
-
  
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; export rvm_pretty_print_flag=1 ; fi
 
