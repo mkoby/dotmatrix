@@ -44,6 +44,7 @@ alias gl='git log'
 alias gb='git branch'
 alias gco='git checkout'
 alias gd='git diff'
+alias gu='git pull origin `git symbolic-ref --short -q HEAD`; git fetch origin'
 
 # Usage:
 #   gc 'bug is fixed'                 # non-interactive mode
