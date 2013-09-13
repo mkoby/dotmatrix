@@ -1,0 +1,22 @@
+# This file is for adding things to $PATH
+# We do this so that these things aren't spread out through other files
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+### Add path for Android SDK
+if [ -d /opt/android_sdk ]; then
+  export PATH="/opt/android_sdk/tools:/opt/android_sdk/platform-tools:$PATH"
+fi
+
+### Add path for Android SDK
+if [ -d /opt/android-studio ]; then
+  export PATH="/opt/android-studio/bin:/opt/android-studio/sdk/platform-tools:$PATH"
+fi
+
+### Add path for Android SDK
+if [ -d /opt/android-studio ]; then
+  export PATH="/opt/android_sdk/tools:/opt/android_sdk/platform-tools:$PATH"
+fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

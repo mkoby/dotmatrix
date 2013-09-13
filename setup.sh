@@ -8,6 +8,7 @@ BASHRC=${HOME}/.bashrc
 BASHPROFILE=${HOME}/.bash_profile
 GEMRC=${HOME}/.gemrc
 ALIASES=${HOME}/.bash_aliases
+PATHS_FILE=${HOME}/.paths
 
 # First remove existing files if they exist
 if [ -h ${VIMRC} ]; then
@@ -70,6 +71,15 @@ else
 	echo "${ALIASES} was not found"
 fi
 
+if [ -h ${PATHS_FILE} ]; then
+	echo ".paths is a LINK, unlinking"
+	unlink ${PATHS_FILE}
+elif [ -f ${PATHS_FILE} ]; then
+	echo ".paths is a FILE, deleting"
+	rm -f ${PATHS_FILE}
+else
+	echo "${PATHS_FILE} was not found"
+fi
 
 #Create symbolic links to these files
 
@@ -90,3 +100,6 @@ ln -s `pwd`/gemrc $GEMRC
 
 echo "Linking .bash_aliases file"
 ln -s `pwd`/bash_aliases $ALIASES
+
+echo "Linking .paths file"
+ln -s `pwd`/paths $PATHS_FILE

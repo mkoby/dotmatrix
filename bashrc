@@ -2,6 +2,9 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# Load additions to PATH
+. ~/.paths
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -125,13 +128,3 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; e
 
 [[ -f ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-### Add path for Android SDK
-if [ -d /opt/android_sdk ]; then
-  export PATH="/opt/android_sdk/tools:/opt/android_sdk/platform-tools:$PATH"
-fi
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
