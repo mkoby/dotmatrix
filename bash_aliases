@@ -40,11 +40,11 @@ alias ga='git add'
 alias gull='git pull'
 alias gush='git push'
 alias gsh='git show'
-alias gl='git log'
+alias gl="git log --pretty='format:%C(white)%h%Creset - %C(green)%an%Creset, %C(yellow)%ar%Creset : %C(cyan)%s%Creset'"
 alias gb='git branch'
 alias gco='git checkout'
 alias gd='git diff'
-alias gu='git pull origin `git symbolic-ref --short -q HEAD`; git fetch origin'
+alias gu='git pull --rebase origin `git symbolic-ref --short -q HEAD`; git fetch origin -p'
 
 # Usage:
 #   gc 'bug is fixed'                 # non-interactive mode
