@@ -103,3 +103,9 @@ ln -s `pwd`/bash_aliases $ALIASES
 
 echo "Linking .paths file"
 ln -s `pwd`/paths $PATHS_FILE
+
+# Create git aliases
+git config --global alias.undo 'reset --soft HEAD^'
+git config --global alias.l "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit"
+git config --global alias.update '!sh -c "git pull --rebase origin `git symbolic-ref --short -q HEAD`; git fetch origin -p"'
+git config --global alias.s 'status'
