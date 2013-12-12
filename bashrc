@@ -128,3 +128,5 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; e
 
 [[ -f ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
