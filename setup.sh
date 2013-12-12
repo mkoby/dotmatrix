@@ -109,3 +109,5 @@ git config --global alias.undo 'reset --soft HEAD^'
 git config --global alias.l "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit"
 git config --global alias.update '!sh -c "git pull --rebase origin `git symbolic-ref --short -q HEAD`; git fetch origin -p"'
 git config --global alias.s 'status'
+git config --global alias.com 'checkout master'
+git config --global alias.po '!git push origin `git symbolic-ref --short -q HEAD`'
