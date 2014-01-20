@@ -110,4 +110,4 @@ git config --global alias.l "log --color --graph --pretty=format:'%Cred%h%Creset
 git config --global alias.update '!sh -c "git pull --rebase origin `git symbolic-ref --short -q HEAD`; git fetch origin -p"'
 git config --global alias.s '!git status; git submodule status'
 git config --global alias.com 'checkout master'
-git config --global alias.po '!git push origin `git symbolic-ref --short -q HEAD`'
+git config --global alias.po '!git push -u origin `git symbolic-ref --short -q HEAD`'
