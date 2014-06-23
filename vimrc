@@ -19,7 +19,7 @@ if has('gui_running')
   set background=dark
   colorscheme solarized
 else
-  colorscheme pablo
+  colorscheme vividchalk
 endif
 
 filetype plugin indent on

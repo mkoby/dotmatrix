@@ -27,6 +27,9 @@ alias l='ls -CF'
 # GVim Alias 160x48 geometry, for Linux
 alias gvim='gvim -geometry 160x48'
 
+# Ctags a Rails project
+alias tag='ctags -R . $(bundle list --paths) -f .tags'
+
 # Alias HUB as git if hub is installed
 # Find HUB at http://defunkt.io/hub/
 if which hub >/dev/null; then
@@ -61,3 +64,7 @@ function gc {
     git commit -m "$1"
   fi
 }
+
+
+## Iberon stuff
+alias nciteprep='bundle && bundle exec rake example_files:apply:all && bundle exec rake db:mulligan:reset db:test:prepare'
