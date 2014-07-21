@@ -24,6 +24,10 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# Ensure less interprets color codes
+
+alias less='less -r'
+
 # GVim Alias 160x48 geometry, for Linux
 alias gvim='gvim -geometry 160x48'
 
