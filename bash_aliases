@@ -32,7 +32,7 @@ alias less='less -r'
 alias gvim='gvim -geometry 160x48'
 
 # Ctags a Rails project
-alias tag='ctags -R . $(bundle list --paths) -f .tags'
+alias tag_rails='ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)'
 
 # Alias HUB as git if hub is installed
 # Find HUB at http://defunkt.io/hub/
@@ -71,4 +71,4 @@ function gc {
 
 
 ## Iberon stuff
-alias nciteprep='bundle && bundle exec rake example_files:apply:all && bundle exec rake db:mulligan:reset db:test:prepare'
+alias nciteprep='bundle && bundle exec rake example_files:apply:all && bundle exec phil-columns reset schema && bundle exec phil-columns mulligan; bundle exec rake db:test:prepare'
