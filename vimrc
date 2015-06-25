@@ -55,6 +55,7 @@ runtime! macros/matchit.vim
 augroup myfiletypes
   autocmd!
   autocmd FileType ruby,eruby,yaml,cucumber set ai sw=2 sts=2 et
+  autocmd BufWritePre <buffer> StripWhitespace
 augroup END
 
 let g:rubytest_cmd_spec = "rspec -f p --no-color %p"
