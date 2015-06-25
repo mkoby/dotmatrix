@@ -9,8 +9,11 @@ BASHPROFILE=${HOME}/.bash_profile
 GEMRC=${HOME}/.gemrc
 ALIASES=${HOME}/.bash_aliases
 PATHS_FILE=${HOME}/.paths
+CTAGS_FILE=${HOME}/.ctags
 
 # First remove existing files if they exist
+echo "UNLINKING/DELETING existing config files"
+
 if [ -h ${VIMRC} ]; then
 	echo ".vimrc is a LINK, unlinking"
 	unlink ${VIMRC}
@@ -81,7 +84,18 @@ else
 	echo "${PATHS_FILE} was not found"
 fi
 
+if [ -h ${CTAGS_FILE} ]; then
+	echo ".ctags is a LINK, unlinking"
+	unlink ${CTAGS_FILE}
+elif [ -f ${CTAGS_FILE} ]; then
+	echo ".ctags is a FILE, deleting"
+	rm -f ${CTAGS_FILE}
+else
+	echo "${CTAGS_FILE} was not found"
+fi
+
 #Create symbolic links to these files
+echo "Linking config files to home directory"
 
 echo "Linking .vimrc file"
 ln -s `pwd`/vimrc $VIMRC
@@ -104,7 +118,11 @@ ln -s `pwd`/bash_aliases $ALIASES
 echo "Linking .paths file"
 ln -s `pwd`/paths $PATHS_FILE
 
+echo "Linking .ctags file"
+ln -s `pwd`/ctags $CTAGS_FILE
+
 # Create git aliases
+echo "Creating commonly used git aliases"
 git config --global alias.undo 'reset --soft HEAD^'
 git config --global alias.l "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit"
 git config --global alias.update '!sh -c "git pull --rebase origin `git symbolic-ref --short -q HEAD`; git fetch origin -p"'
