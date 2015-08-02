@@ -35,7 +35,7 @@ set statusline+=%-3.3n\                      " buffer number
 set statusline+=%f\                          " file name
 set statusline+=%h%m%r%w                     " flags
 set statusline+=[%{strlen(&ft)?&ft:'none'},  " filetype
-set statusline+=%{strlen(&fenc)?&fenc:&enc}, " encoding
+" set statusline+=%{strlen(&fenc)?&fenc:&enc}, " encoding
 set statusline+=%{&fileformat}]\              " file format
 set statusline+=%{fugitive#statusline()}
 set statusline+=%=                           " right align
@@ -59,5 +59,5 @@ augroup myfiletypes
 augroup END
 
 let g:rubytest_cmd_spec = "rspec -f p --no-color %p"
-let g:rubytest_cmd_example = "rspec %p --no-color -l '%c'"
+let g:rubytest_cmd_example = "rspec '%p:%c' --no-color"
 
