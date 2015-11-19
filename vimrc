@@ -56,8 +56,27 @@ augroup myfiletypes
   autocmd!
   autocmd FileType ruby,eruby,yaml,cucumber set ai sw=2 sts=2 et
   autocmd BufWritePre <buffer> StripWhitespace
+  autocmd FileType python set tabstop=8 expandtab shiftwidth=4 softtabstop=4
 augroup END
 
 let g:rubytest_cmd_spec = "rspec -f p --no-color %p"
 let g:rubytest_cmd_example = "rspec '%p:%c' --no-color"
 
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
+
+autocmd BufWritePre *.rb :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.yml :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.erb :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.haml :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.rabl :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.js :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.css :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.rake :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre Gemfile :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre Guardfile :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre Guardfile.example :call <SID>StripTrailingWhitespaces()
