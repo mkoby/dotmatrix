@@ -39,6 +39,7 @@ To get the most out of the vim-fuzzyfinder plugin, you'll need to:
 For using vim-rubytest I have it set to defaults, which are:
 
 ```<Leader>t```: run test case under cursor
+
 ```<Leader>T```: run all tests in a file
 
 ## Updating Submodules
@@ -49,12 +50,14 @@ You'll need to routinely update the submodules to ensure you have the latest ver
 
 ## Included Git Shortcuts
 
-```git undo```: This will undo the last commit
-```git l```: Displays a nice version of the git log complete with branches, SHA's, and commit messages
-```git update```: Pulls origin for the current branch to the current branch (with --rebase), also fetches origin.
-```git s```: Gives a branch and submodule status
-```git com```: Checkout master brnach
-```git po```: Pushes current branch to origin, makes a tracking branch
+```
+git undo #This will undo the last commit
+git l #Displays a nice version of the git log complete with branches, SHA's, and commit messages
+git update #Pulls origin for the current branch to the current branch (with --rebase), also fetches origin.
+git s #Gives a branch and submodule status
+git com #Checkout master brnach
+git po #Pushes current branch to origin, makes a tracking branch
+```
 
 ## Warranty
 
