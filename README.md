@@ -45,7 +45,7 @@ For using vim-rubytest I have it set to defaults, which are:
 
 You'll need to routinely update the submodules to ensure you have the latest versions of all the vim plugins, do update all the submodules you can type the following:
 
-```git@github.com:mattreduce/vim-mix.git```
+```git submodule foreach git pull origin master```
 
 ## Included Git Shortcuts
 
