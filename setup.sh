@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Initialize files/folders we want to work with
+BASHFOLDER=${HOME}/.bash
 VIMRC=${HOME}/.vimrc
 GVIMRC=${HOME}/.gvimrc
 VIMFOLDER=${HOME}/.vim
@@ -13,6 +14,16 @@ CTAGS_FILE=${HOME}/.ctags
 
 # First remove existing files if they exist
 echo "UNLINKING/DELETING existing config files"
+
+if [ -h ${BASHFOLDER} ]; then
+	echo ".bash is a LINK, unlinking"
+	unlink ${BASHFOLDER}
+elif [ -f ${BASHFOLDER} ]; then
+	echo ".bash is a FOLDER, deleting"
+	rm -rf ${BASHFOLDER}
+else
+	echo "${BASHFOLDER} was not found"
+fi
 
 if [ -h ${VIMRC} ]; then
 	echo ".vimrc is a LINK, unlinking"
@@ -96,6 +107,9 @@ fi
 
 #Create symbolic links to these files
 echo "Linking config files to home directory"
+
+echo "Linking .vim folder"
+ln -s `pwd`/bash $BASHFOLDER
 
 echo "Linking .vimrc file"
 ln -s `pwd`/vimrc $VIMRC

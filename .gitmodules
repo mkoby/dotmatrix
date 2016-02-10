@@ -76,3 +76,9 @@
 [submodule "vim/bundle/vim-mix"]
 	path = vim/bundle/vim-mix
 	url = git@github.com:mattreduce/vim-mix.git
+[submodule "vim/bundle/vim-javascript"]
+	path = vim/bundle/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
+[submodule "vim/bundle/vim-indent-guidelines"]
+	path = vim/bundle/vim-indent-guidelines
+	url = git@github.com:nathanaelkane/vim-indent-guides.git

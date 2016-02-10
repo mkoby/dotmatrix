@@ -2,6 +2,9 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+source ~/.bash/aliases.bash
+source ~/.bash/env.bash
+
 # Load additions to PATH
 . ~/.paths
 
@@ -13,7 +16,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 if [ -f /usr/share/git/git-prompt.sh ] && ! shopt -oq posix; then
-    . /usr/share/git/git-prompt.sh 
+    . /usr/share/git/git-prompt.sh
 fi
 
 if [ -x /usr/local/bin/brew ]; then
@@ -21,7 +24,7 @@ if [ -x /usr/local/bin/brew ]; then
     . `brew --prefix`/etc/bash_completion
   fi
 fi
- 
+
 
 function __my_rvm_ruby_version {
   local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
