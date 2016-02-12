@@ -19,7 +19,10 @@ if has('gui_running')
   set background=dark
   colorscheme solarized
 else
-  colorscheme vividchalk
+  set background=dark
+  let g:solarized_termcolors=16
+  colorscheme solarized
+  " colorscheme vividchalk
 endif
 
 filetype plugin indent on
