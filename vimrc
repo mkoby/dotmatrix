@@ -20,7 +20,7 @@ if has('gui_running')
   colorscheme solarized
 else
   set background=dark
-  let g:solarized_termcolors=16
+  " let g:solarized_termcolors=16
   colorscheme solarized
   " colorscheme vividchalk
 endif
