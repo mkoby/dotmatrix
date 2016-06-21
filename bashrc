@@ -2,6 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+source ~/.bash/bash-sensible/sensible.bash
 source ~/.bash/aliases.bash
 source ~/.bash/env.bash
 
