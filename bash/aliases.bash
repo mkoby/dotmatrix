@@ -19,7 +19,7 @@ else
         ls_opt="-G" #Mac OSX ls colors
 fi
 alias ls='ls $ls_opt'
- 
+
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -36,9 +36,9 @@ alias tag_rails='ctags -R --languages=ruby --exclude=.git --exclude=log . $(bund
 
 # Alias HUB as git if hub is installed
 # Find HUB at http://defunkt.io/hub/
-if which hub >/dev/null; then
-  alias git='hub'
-fi
+#if which hub >/dev/null; then
+#  alias git='hub'
+#fi
 
 # Git shortcuts
 alias gs='git status; git submodule status'
@@ -58,9 +58,9 @@ alias gu='git pull --rebase origin `git symbolic-ref --short -q HEAD`; git fetch
 #   gc                                # interactive mode
 #   Commit message: bug is fixed
 #
-function gc { 
+function gc {
   local commitmessage
-  if [ "" = "$1" ]; then 
+  if [ "" = "$1" ]; then
     echo -n 'Commit message: '
     commitmessage="$(ruby -e "puts gets")"
     git commit -m "$commitmessage"

@@ -6,6 +6,10 @@ source ~/.bash/bash-sensible/sensible.bash
 source ~/.bash/aliases.bash
 source ~/.bash/env.bash
 
+if [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
+  source /usr/share/git-core/contrib/completion/git-prompt.sh
+fi
+
 # Load additions to PATH
 . ~/.paths
 
