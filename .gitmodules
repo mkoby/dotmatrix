@@ -84,7 +84,7 @@
 	url = git@github.com:nathanaelkane/vim-indent-guides.git
 [submodule "bash/bash-sensible"]
 	path = bash/bash-sensible
-	url = git@github.com:mrzool/bash-sensible.git
+	url = git@github.com:mkoby/bash-sensible.git
 [submodule "vim/bundle/ghcmod-vim"]
 	path = vim/bundle/ghcmod-vim
 	url = git@github.com:eagletmt/ghcmod-vim.git
