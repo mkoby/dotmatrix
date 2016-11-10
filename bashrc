@@ -128,8 +128,8 @@ esac
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.bash/aliases.bash ]; then
+    . ~/.bash/aliases.bash
 fi
 
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; export rvm_pretty_print_flag=1 ; fi
@@ -138,3 +138,5 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; e
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
