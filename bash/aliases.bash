@@ -72,3 +72,5 @@ function gc {
 
 ## Iberon stuff
 alias nciteprep='bundle && bundle exec rake example_files:apply:all && bundle exec phil-columns reset schema && bundle exec phil-columns mulligan; bundle exec rake db:test:prepare'
+alias mdm='bundle exec bin/mdms start -i -r 5001 -p 5002'
+alias vs='mix phil_columns.mulligan; iex -S mix phoenix.server'

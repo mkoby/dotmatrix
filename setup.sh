@@ -127,7 +127,7 @@ echo "Linking .gemrc file"
 ln -s `pwd`/gemrc $GEMRC
 
 echo "Linking .bash_aliases file"
-ln -s `pwd`/bash_aliases $ALIASES
+ln -s `pwd`/bash/aliases.bash $ALIASES
 
 echo "Linking .paths file"
 ln -s `pwd`/paths $PATHS_FILE
