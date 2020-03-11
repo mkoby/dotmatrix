@@ -7,3 +7,6 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### Add Android SDK tools
+export PATH="/Users/mkoby/Library/Android/sdk/platform-tools:$PATH"

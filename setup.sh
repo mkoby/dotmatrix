@@ -11,6 +11,8 @@ GEMRC=${HOME}/.gemrc
 ALIASES=${HOME}/.bash_aliases
 PATHS_FILE=${HOME}/.paths
 CTAGS_FILE=${HOME}/.ctags
+NVMFOLDER=${HOME}/.nvm
+ASDFFOLDER=${HOME}/.asdf
 
 # First remove existing files if they exist
 echo "UNLINKING/DELETING existing config files"
@@ -143,3 +145,24 @@ git config --global alias.update '!sh -c "git pull --rebase origin `git symbolic
 git config --global alias.s '!git status; git submodule status'
 git config --global alias.com 'checkout master'
 git config --global alias.po '!git push -u origin `git symbolic-ref --short -q HEAD`'
+
+if [ -d $NVMFOLDER ]; then
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+fi
+
+if [ -d $ASDFFOLDER ]; then
+  echo "Installing ASDF"
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.7
+
+  echo "  Adding Erlang plugin"
+  asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
+
+  echo "  Adding Elixir plugin"
+  asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+
+  echo "  Adding Node.js plugin"
+  asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+
+  echo "  -- NOTE: You may want to import node team keyring, after gpg is installed"
+  echo "\n           bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring"
+fi
