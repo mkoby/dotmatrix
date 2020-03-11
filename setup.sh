@@ -146,13 +146,28 @@ git config --global alias.s '!git status; git submodule status'
 git config --global alias.com 'checkout master'
 git config --global alias.po '!git push -u origin `git symbolic-ref --short -q HEAD`'
 
-if [ -d $NVMFOLDER ]; then
+if [ ! -d $NVMFOLDER ]; then
+  echo "Installing NVM"
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+  echo "  Sourcing NVM files"
+  echo "    Source NVM.sh"
+  [[ -f ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
+
+  echo "    Source NVM completions"
+  [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 fi
 
 if [ -d $ASDFFOLDER ]; then
   echo "Installing ASDF"
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.7
+
+  echo "  Sourcing ASDF files"
+  echo "    Source asdf.sh"
+  . $ASDFFOLDER/.asdf/asdf.sh
+
+  echo "    Source ASDF completions"
+  . $HOME/.asdf/completions/asdf.bash
 
   echo "  Adding Erlang plugin"
   asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
